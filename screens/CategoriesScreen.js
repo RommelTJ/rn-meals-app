@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
+// Note: Any component mapped to identifiers in navigators gets the "navigation" props
 const CategoriesScreen = (props) => {
   return (
     <View style={styles.screen}>
       <Text>The categories screen!</Text>
+      <Button title="Go to Meals!" onPress={() => props.navigation.navigate({routeName: "CategoryMeals"})} />
     </View>
   );
 };
