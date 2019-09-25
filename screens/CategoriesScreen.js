@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 import { CATEGORIES } from "../data/dummy-data";
+import Colors from "../constants/Colors";
 
 
 // Note: Any component mapped to identifiers in navigators gets the "navigation" props
@@ -32,7 +33,7 @@ const CategoriesScreen = (props) => {
 CategoriesScreen.navigationOptions = {
   headerTitle: "Meal Categories",
   headerStyle: {
-    backgroundColor: "red"
+    backgroundColor: Colors.primaryColor
   }
 };
 
