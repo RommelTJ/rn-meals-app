@@ -1,19 +1,24 @@
 import React from 'react';
-import { FlatList, StyleSheet, View, Text } from 'react-native';
+import { FlatList, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 import { CATEGORIES } from "../data/dummy-data";
 
 
-const renderGridItem = (itemData) => {
-  return (
-    <View style={styles.gridItem}>
-      <Text>{itemData.item.title}</Text>
-    </View>
-  );
-};
-
 // Note: Any component mapped to identifiers in navigators gets the "navigation" props
 const CategoriesScreen = (props) => {
+
+  const renderGridItem = (itemData) => {
+    return (
+      <TouchableOpacity onPress={() => {
+        props.navigation.navigate({routeName: "CategoryMeals"})
+      }}>
+        <View style={styles.gridItem}>
+          <Text>{itemData.item.title}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <FlatList
       keyExtractor={(item, index) => item.id}
