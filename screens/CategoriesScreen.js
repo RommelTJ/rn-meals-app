@@ -29,6 +29,13 @@ const CategoriesScreen = (props) => {
   );
 };
 
+CategoriesScreen.navigationOptions = {
+  headerTitle: "Meal Categories",
+  headerStyle: {
+    backgroundColor: "red"
+  }
+};
+
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
