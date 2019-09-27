@@ -1,8 +1,7 @@
 import React from 'react';
-import { FlatList, StyleSheet, View, Text, TouchableOpacity, Platform } from 'react-native';
+import { FlatList, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 import { CATEGORIES } from "../data/dummy-data";
-import Colors from "../constants/Colors";
 
 
 // Note: Any component mapped to identifiers in navigators gets the "navigation" props
@@ -38,11 +37,7 @@ const CategoriesScreen = (props) => {
 };
 
 CategoriesScreen.navigationOptions = {
-  headerTitle: "Meal Categories",
-  headerStyle: {
-    backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
-  },
-  headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor
+  headerTitle: "Meal Categories"
 };
 
 const styles = StyleSheet.create({
