@@ -11,15 +11,16 @@ import Colors from "../constants/Colors";
 const MealsNavigator = createStackNavigator({
   Categories: CategoriesScreen,
   CategoryMeals: {
-    screen: CategoryMealsScreen,
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
-      },
-      headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor
-    }
+    screen: CategoryMealsScreen
   },
   MealDetail: MealDetailScreen
+}, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
+    },
+    headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor
+  }
 });
 
 export default createAppContainer(MealsNavigator);
