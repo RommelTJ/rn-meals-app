@@ -8,20 +8,23 @@ import {Platform} from "react-native";
 import Colors from "../constants/Colors";
 
 
-const MealsNavigator = createStackNavigator({
-  Categories: CategoriesScreen,
-  CategoryMeals: {
-    screen: CategoryMealsScreen
-  },
-  MealDetail: MealDetailScreen
-}, {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
+const MealsNavigator = createStackNavigator(
+  {
+    Categories: CategoriesScreen,
+    CategoryMeals: {
+      screen: CategoryMealsScreen
     },
-    headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
-    headerTitle: "Some Overwritten title"
+    MealDetail: MealDetailScreen
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
+      },
+      headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
+      headerTitle: "Some Overwritten title"
+    }
   }
-});
+);
 
 export default createAppContainer(MealsNavigator);
