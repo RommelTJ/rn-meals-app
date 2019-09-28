@@ -3,18 +3,9 @@ import {TouchableOpacity, View, Text, StyleSheet} from "react-native";
 
 const CategoryGridTile = (props) => {
   return (
-    <TouchableOpacity style={styles.gridItem} onPress={() => {
-      props.navigation.navigate(
-        {
-          routeName: "CategoryMeals",
-          params: {
-            categoryId: itemData.item.id
-          }
-        }
-      )
-    }}>
+    <TouchableOpacity style={styles.gridItem} onPress={() => props.onSelect()}>
       <View>
-        <Text>{itemData.item.title}</Text>
+        <Text>{props.title}</Text>
       </View>
     </TouchableOpacity>
   );
