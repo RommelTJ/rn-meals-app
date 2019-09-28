@@ -20,6 +20,12 @@ const CategoryGridTile = (props) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  gridItem: {
+    flex: 1,
+    margin: 15,
+    height: 150
+  }
+});
 
 export default CategoryGridTile;
