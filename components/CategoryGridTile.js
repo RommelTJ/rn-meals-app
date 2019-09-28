@@ -23,7 +23,9 @@ const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
     margin: 15,
-    height: 150
+    height: 150,
+    borderRadius: 10,
+    overflow: "hidden"
   },
   container: {
     flex: 1,
