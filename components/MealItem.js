@@ -6,11 +6,11 @@ const MealItem = (props) => {
     <View style={styles.mealItem}>
       <TouchableOpacity onPress={props.onSelectMeal}>
         <View>
-          <View style={styles.mealRow}>
+          <View style={{...styles.mealRow, ...styles.mealHeader}}>
             <Text>{props.title}</Text>
           </View>
-          <View style={styles.mealRow}>
-
+          <View style={{...styles.mealRow, ...styles.mealDetail}}>
+            <Text>{props.duration}m</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -26,6 +26,13 @@ const styles = StyleSheet.create({
   },
   mealRow: {
     flexDirection: 'row'
+  },
+  mealHeader: {
+    height: '90%'
+  },
+  mealDetail: {
+    paddingHorizontal: 10,
+    justifyContent: 'space-between'
   }
 });
 

@@ -8,7 +8,12 @@ const CategoryMealsScreen = (props) => {
   const displayedMeals = MEALS.filter(meal => meal.categoryIds.indexOf(catId) >= 0);
 
   const renderMealItem = (itemData) => {
-    return <MealItem title={itemData.item.title} onSelectMeal={() => {}} />;
+    return (
+      <MealItem
+        title={itemData.item.title}
+        duration={itemData.item.duration}
+        onSelectMeal={() => {}}
+      />);
   };
 
   return (
