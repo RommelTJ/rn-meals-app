@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const MealItem = (props) => {
   return (
-    <View>
-      <Text>{props.title}</Text>
-    </View>
+    <TouchableOpacity onPress={props.onSelectMeal}>
+      <View>
+        <Text>{props.title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
