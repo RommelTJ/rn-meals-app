@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
 const MealItem = (props) => {
   return (
@@ -7,6 +7,7 @@ const MealItem = (props) => {
       <TouchableOpacity onPress={props.onSelectMeal}>
         <View>
           <View style={{...styles.mealRow, ...styles.mealHeader}}>
+            <ImageBackground source={{uri: props.image}} style={styles.bgImage} />
             <Text>{props.title}</Text>
           </View>
           <View style={{...styles.mealRow, ...styles.mealDetail}}>
@@ -35,6 +36,10 @@ const styles = StyleSheet.create({
   mealDetail: {
     paddingHorizontal: 10,
     justifyContent: 'space-between'
+  },
+  bgImage: {
+    width: '100%',
+    height: '100%'
   }
 });
 
