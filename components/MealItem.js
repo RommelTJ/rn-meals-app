@@ -28,17 +28,19 @@ const styles = StyleSheet.create({
   mealItem: {
     height: 200,
     width: '100%',
-    backgroundColor: '#CCC'
+    backgroundColor: '#F5F5F5'
   },
   mealRow: {
     flexDirection: 'row'
   },
   mealHeader: {
-    height: '90%'
+    height: '85%'
   },
   mealDetail: {
     paddingHorizontal: 10,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: '15%'
   },
   bgImage: {
     width: '100%',
