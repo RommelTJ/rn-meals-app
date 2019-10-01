@@ -3,14 +3,30 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const MealItem = (props) => {
   return (
-    <TouchableOpacity onPress={props.onSelectMeal}>
-      <View>
-        <Text>{props.title}</Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.mealItem}>
+      <TouchableOpacity onPress={props.onSelectMeal}>
+        <View>
+          <View style={styles.mealRow}>
+            <Text>{props.title}</Text>
+          </View>
+          <View style={styles.mealRow}>
+
+          </View>
+        </View>
+      </TouchableOpacity>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  mealItem: {
+    height: 200,
+    width: '100%',
+    backgroundColor: '#CCC'
+  },
+  mealRow: {
+    flexDirection: 'row'
+  }
+});
 
 export default MealItem;
