@@ -35,6 +35,11 @@ const MealsFavTabNavigator = createBottomTabNavigator(
   {
     Meals: MealsNavigator,
     Favorites: FavoritesScreen
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: Colors.accentColor
+    }
   }
 );
 
