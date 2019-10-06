@@ -113,7 +113,10 @@ const MainNavigator = createDrawerNavigator(
   },
   {
     contentOptions: {
-      activeTintColor: Colors.accentColor
+      activeTintColor: Colors.accentColor,
+      labelStyle: {
+        fontFamily: "open-sans-bold"
+      }
     }
   }
 );
