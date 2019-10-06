@@ -92,6 +92,9 @@ const MealsFavTabNavigator = Platform.OS === 'android'
 const FiltersNavigator = createStackNavigator(
   {
     Filters: FiltersScreen
+  },
+  {
+    defaultNavigationOptions: defaultStackNavOptions
   }
 );
 
