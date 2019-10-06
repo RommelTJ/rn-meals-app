@@ -40,7 +40,8 @@ const tabScreenConfig = {
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <Ionicons name="ios-restaurant" size={25} color={tabInfo.tintColor} />;
-      }
+      },
+      tabBarColor: Colors.primaryColor
     }
   },
   Favorites: {
