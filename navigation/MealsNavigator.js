@@ -13,6 +13,14 @@ import Colors from "../constants/Colors";
 import FavoritesScreen from "../screens/FavoritesScreen";
 
 
+const defaultStackNavOptions = {
+  headerStyle: {
+    backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
+  },
+  headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
+  headerTitle: "Some Overwritten title"
+};
+
 const MealsNavigator = createStackNavigator(
   {
     Categories: CategoriesScreen,
@@ -24,13 +32,17 @@ const MealsNavigator = createStackNavigator(
   {
     // mode: 'modal', // default is card transition (push/pop)
     // initialRouteName: 'Categories',
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: Platform.OS === "android" ? Colors.primaryColor : ""
-      },
-      headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
-      headerTitle: "Some Overwritten title"
-    }
+    defaultNavigationOptions: defaultStackNavOptions
+  }
+);
+
+const FavNavigator = createStackNavigator(
+  {
+    Favorites: FavoritesScreen,
+    MealDetail: MealDetailScreen
+  },
+  {
+    defaultNavigationOptions: defaultStackNavOptions
   }
 );
 
