@@ -110,6 +110,11 @@ const MainNavigator = createDrawerNavigator(
       }
     },
     Filters: FiltersNavigator
+  },
+  {
+    contentOptions: {
+      activeTintColor: Colors.accentColor
+    }
   }
 );
 
