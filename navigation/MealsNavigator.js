@@ -60,7 +60,10 @@ const MealsFavTabNavigator = Platform.OS === 'android'
     tabScreenConfig,
     {
       activeColor: 'white',
-      shifting: true
+      shifting: false, // makes the tab grow/shrink on Android
+      barStyle: {
+        backgroundColor: Colors.primaryColor
+      }
     }
   )
   : createBottomTabNavigator(
