@@ -90,6 +90,9 @@ const MealsFavTabNavigator = Platform.OS === 'android'
     tabScreenConfig,
     {
     tabBarOptions: {
+      labelStyle: {
+        fontFamily: "open-sans"
+      },
       activeTintColor: Colors.accentColor
     }
   }
