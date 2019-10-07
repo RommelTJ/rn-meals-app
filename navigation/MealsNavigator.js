@@ -62,7 +62,7 @@ const tabScreenConfig = {
         return <Ionicons name="ios-restaurant" size={25} color={tabInfo.tintColor} />;
       },
       tabBarColor: Colors.primaryColor,
-      tabBarLabel: <Text style={{fontFamily: "open-sans-bold"}}>Meals</Text>
+      tabBarLabel: Platform.OS === "android" ? <Text style={{fontFamily: "open-sans-bold"}}>Meals</Text> : "Meals"
     }
   },
   Favorites: {
