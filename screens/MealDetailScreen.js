@@ -12,7 +12,7 @@ const MealDetailScreen = (props) => {
   return (
     <ScrollView>
       <Image source={{uri: selectedMeal.imageUrl}} style={styles.image} />
-      <View style={{...styles.mealRow, ...styles.mealDetail}}>
+      <View style={styles.details}>
         <DefaultText>{selectedMeal.duration}m</DefaultText>
         <DefaultText>{selectedMeal.complexity.toUpperCase()}</DefaultText>
         <DefaultText>{selectedMeal.affordability.toUpperCase()}</DefaultText>
@@ -40,10 +40,14 @@ MealDetailScreen.navigationOptions = (navigationData) => {
 };
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+  image: {
+    width: "100%",
+    height: 200
+  },
+  details: {
+    flexDirection: "row",
+    padding: 15,
+    justifyContent: "space-around"
   }
 });
 
