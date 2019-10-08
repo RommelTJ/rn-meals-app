@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Switch } from 'react-native';
+import { View, Text, StyleSheet, Switch, Platform } from 'react-native';
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
 import Colors from "../constants/Colors";
@@ -14,7 +14,7 @@ const FiltersScreen = (props) => {
         <Text>Gluten-free</Text>
         <Switch
           trackColor={{true: Colors.primaryColor}}
-          thumbColor={Colors.primaryColor}
+          thumbColor={Platform.OS === "android" ? Colors.primaryColor : ""}
           value={isGlutenFree}
           onValueChange={newValue => setIsGlutenFree(newValue)}
         />
