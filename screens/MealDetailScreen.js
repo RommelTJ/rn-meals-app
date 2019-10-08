@@ -24,7 +24,11 @@ const MealDetailScreen = (props) => {
         })
       }
       <Text style={styles.title}>Steps</Text>
-      <Text>List of steps...</Text>
+      {
+        selectedMeal.steps.map(step => {
+          return <Text key={step}>{step}</Text>;
+        })
+      }
     </ScrollView>
   );
 };
