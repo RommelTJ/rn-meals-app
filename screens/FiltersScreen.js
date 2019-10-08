@@ -6,7 +6,7 @@ import CustomHeaderButton from "../components/HeaderButton";
 const FiltersScreen = (props) => {
   return (
     <View style={styles.screen}>
-      <Text>The filters screen!</Text>
+      <Text style={styles.title}>Available Filters / Restrictions</Text>
     </View>
   );
 };
