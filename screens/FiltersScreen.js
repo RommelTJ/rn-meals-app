@@ -35,11 +35,19 @@ FiltersScreen.navigationOptions = (navData) => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center'
   },
-  title: {},
-  filterContainer: {}
+  title: {
+    fontFamily: "open-sans-bold",
+    fontSize: 22,
+    margin: 20,
+    textAlign: "center"
+  },
+  filterContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center"
+  }
 });
 
 export default FiltersScreen;
