@@ -45,8 +45,9 @@ const styles = StyleSheet.create({
   },
   filterContainer: {
     flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center"
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "80%"
   }
 });
 
