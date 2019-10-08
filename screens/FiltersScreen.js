@@ -4,21 +4,33 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
 import Colors from "../constants/Colors";
 
+
+const FilterSwitch = (props) => {
+  return (
+    <View style={styles.filterContainer}>
+      <Text>{props.label}</Text>
+      <Switch
+        trackColor={{true: Colors.primaryColor}}
+        thumbColor={Platform.OS === "android" ? Colors.primaryColor : ""}
+        value={props.state}
+        onValueChange={props.onChange}
+      />
+    </View>
+  );
+};
+
+
 const FiltersScreen = (props) => {
   const [isGlutenFree, setIsGlutenFree] = useState(false);
 
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>Available Filters / Restrictions</Text>
-      <View style={styles.filterContainer}>
-        <Text>Gluten-free</Text>
-        <Switch
-          trackColor={{true: Colors.primaryColor}}
-          thumbColor={Platform.OS === "android" ? Colors.primaryColor : ""}
-          value={isGlutenFree}
-          onValueChange={newValue => setIsGlutenFree(newValue)}
-        />
-      </View>
+      <FilterSwitch
+        label={"Gluten-free"}
+        state={isGlutenFree}
+        onChange={newValue => setIsGlutenFree(newValue)}
+      />
     </View>
   );
 };
