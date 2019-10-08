@@ -14,6 +14,7 @@ const FiltersScreen = (props) => {
         <Text>Gluten-free</Text>
         <Switch
           trackColor={{true: Colors.primaryColor}}
+          thumbColor={Colors.primaryColor}
           value={isGlutenFree}
           onValueChange={newValue => setIsGlutenFree(newValue)}
         />
