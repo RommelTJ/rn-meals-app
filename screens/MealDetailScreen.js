@@ -13,9 +13,9 @@ const MealDetailScreen = (props) => {
     <ScrollView>
       <Image />
       <View style={{...styles.mealRow, ...styles.mealDetail}}>
-        <DefaultText>{props.duration}m</DefaultText>
-        <DefaultText>{props.complexity.toUpperCase()}</DefaultText>
-        <DefaultText>{props.affordability.toUpperCase()}</DefaultText>
+        <DefaultText>{selectedMeal.duration}m</DefaultText>
+        <DefaultText>{selectedMeal.complexity.toUpperCase()}</DefaultText>
+        <DefaultText>{selectedMeal.affordability.toUpperCase()}</DefaultText>
       </View>
       <Text style={styles.title}>Ingredients</Text>
       <Text>List of ingredients...</Text>
