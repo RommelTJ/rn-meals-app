@@ -48,6 +48,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 15,
     justifyContent: "space-around"
+  },
+  title: {
+    fontFamily: "open-sans-bold",
+    fontSize: 22,
+    textAlign: "center"
   }
 });
 
