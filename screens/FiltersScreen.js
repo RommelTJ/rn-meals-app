@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Switch } from 'react-native';
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
+import Colors from "../constants/Colors";
 
 const FiltersScreen = (props) => {
   const [isGlutenFree, setIsGlutenFree] = useState(false);
@@ -11,7 +12,11 @@ const FiltersScreen = (props) => {
       <Text style={styles.title}>Available Filters / Restrictions</Text>
       <View style={styles.filterContainer}>
         <Text>Gluten-free</Text>
-        <Switch value={isGlutenFree} onValueChange={newValue => setIsGlutenFree(newValue)} />
+        <Switch
+          trackColor={{true: Colors.primaryColor}}
+          value={isGlutenFree}
+          onValueChange={newValue => setIsGlutenFree(newValue)}
+        />
       </View>
     </View>
   );
