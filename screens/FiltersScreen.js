@@ -65,6 +65,15 @@ FiltersScreen.navigationOptions = (navData) => {
             onPress={() => navData.navigation.toggleDrawer()}
           />
         </HeaderButtons>
+      ),
+      headerRight: (
+        <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+          <Item
+            title="Save"
+            iconName="ios-save"
+            onPress={() => console.log("Saving Filters")}
+          />
+        </HeaderButtons>
       )
     }
   );
