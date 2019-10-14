@@ -67,7 +67,7 @@ MealDetailScreen.navigationOptions = (navigationData) => {
     headerTitle: mealTitle,
     headerRight: (
       <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
-        <Item title='Favorite' iconName='ios-star' onPress={toggleFavorite} />
+        <Item title='Favorite' iconName={isFavorite ? 'ios-star' : "ios-star-outline"} onPress={toggleFavorite} />
       </HeaderButtons>
     )
   };
