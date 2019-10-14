@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import MealList from "../components/MealList";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
 import {useSelector} from "react-redux";
+import DefaultText from "../components/DefaultText";
 
 const FavoritesScreen = (props) => {
   const favMeals = useSelector(state => state.meals.favoriteMeals);
@@ -11,7 +12,7 @@ const FavoritesScreen = (props) => {
   if (!favMeals || favMeals.length === 0) {
     return (
       <View style={styles.content}>
-        <Text>No Favorite Meals Found! Start adding some.</Text>
+        <DefaultText>No Favorite Meals Found! Start adding some.</DefaultText>
       </View>
     );
   }
